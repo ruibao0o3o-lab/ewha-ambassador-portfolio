@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peng Ruirui | Student Ambassador Digital Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ewha: {
+                            green: '#00462A',
+                            lightgreen: '#05683F',
+                            darkgreen: '#002B19',
+                            gold: '#D4AF37',
+                            rose: '#E8C3C8',
+                            softpink: '#FAF0F2',
+                            cream: '#FDFBF7'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(232, 195, 200, 0.3);
+        }
+        .dark-glass-card {
+            background: rgba(0, 70, 42, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #00462A 0%, #05683F 50%, #B8860B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-text-gold {
+            background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #E8C3C8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-shadow {
+            box-shadow: 0 20px 40px -15px rgba(0, 70, 42, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-ewha-cream text-slate-800 font-sans antialiased selection:bg-ewha-rose selection:text-ewha-darkgreen">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-ewha-rose/20" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full bg-ewha-green text-white flex items-center justify-center font-serif font-bold text-xl group-hover:bg-ewha-lightgreen transition-colors">
+                    E
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-lg text-ewha-darkgreen tracking-wide block leading-none">PENG RUIRUI</span>
+                    <span class="text-[10px] text-ewha-green/70 font-semibold uppercase tracking-widest block mt-1">Ewha Global MBA</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#about" class="hover:text-ewha-green transition-colors">About</a>
+                <a href="#metrics" class="hover:text-ewha-green transition-colors">Metrics</a>
+                <a href="#demographics" class="hover:text-ewha-green transition-colors">Audience</a>
+                <a href="#portfolio" class="hover:text-ewha-green transition-colors">Campaigns</a>
+                <a href="#strategy" class="hover:text-ewha-green transition-colors">Roadmap</a>
+                <a href="#accounts" class="hover:text-ewha-green transition-colors">Social Links</a>
+            </nav>
+
+            <!-- CTA Action -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#accounts" class="px-5 py-2.5 bg-ewha-green hover:bg-ewha-darkgreen text-white text-xs font-bold uppercase tracking-wider rounded-full shadow-lg shadow-ewha-green/20 transition-all transform hover:-translate-y-0.5">
+                    Connect Profiles
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-ewha-green text-2xl focus:outline-none" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="hidden md:hidden bg-white border-b border-slate-100 px-6 py-4 space-y-3" id="mobile-menu">
+            <a href="#about" class="block text-sm font-semibold text-slate-700 py-1">About</a>
+            <a href="#metrics" class="block text-sm font-semibold text-slate-700 py-1">Metrics</a>
+            <a href="#demographics" class="block text-sm font-semibold text-slate-700 py-1">Audience</a>
+            <a href="#portfolio" class="block text-sm font-semibold text-slate-700 py-1">Campaigns</a>
+            <a href="#strategy" class="block text-sm font-semibold text-slate-700 py-1">Roadmap</a>
+            <a href="#accounts" class="block text-sm font-semibold text-slate-700 py-1">Social Links</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <!-- Decorative Background Elements -->
+        <div class="absolute top-10 right-0 w-96 h-96 bg-ewha-rose/30 rounded-full filter blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 left-10 w-80 h-80 bg-ewha-green/10 rounded-full filter blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-ewha-softpink border border-ewha-rose/50 text-ewha-green text-xs font-bold uppercase tracking-widest">
+                        <i class="fa-solid fa-award text-ewha-gold"></i> Student Ambassador Candidate
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.15]">
+                        Amplifying <span class="gradient-text">Ewha’s Excellence</span> Through Digital Storytelling
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl">
+                        Hello! I'm <strong class="text-slate-900">Peng Ruirui (彭睿睿)</strong>, a Global MBA student at Ewha Womans University. I bridge academic prestige with Gen Z culture through cross-border content strategy, authentic student experience narratives, and data-backed social engagement.
+                    </p>
+
+                    <!-- Quick External Links -->
+                    <div class="pt-2 flex flex-wrap items-center gap-3">
+                        <a href="https://xhslink.com/m/9hklZ0HiXMp" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center gap-2.5 px-5 py-3 bg-red-500 hover:bg-red-600 text-white font-medium text-xs rounded-xl shadow-md transition-all hover:scale-105">
+                            <i class="fa-solid fa-hashtag"></i>
+                            <span>Xiaohongshu (RED)</span>
+                        </a>
+
+                        <a href="https://www.threads.com/@ruibao0o3o?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center gap-2.5 px-5 py-3 bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs rounded-xl shadow-md transition-all hover:scale-105">
+                            <i class="fa-brands fa-threads"></i>
+                            <span>Threads & IG</span>
+                        </a>
+
+                        <a href="https://v.douyin.com/756-GZSf58o/" target="_blank" rel="noopener noreferrer" 
+                           class="inline-flex items-center gap-2.5 px-5 py-3 bg-slate-800 hover:bg-black text-white font-medium text-xs rounded-xl shadow-md transition-all hover:scale-105">
+                            <i class="fa-brands fa-tiktok"></i>
+                            <span>Douyin</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badge Bar -->
+                    <div class="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-4">
+                        <div>
+                            <span class="block text-2xl font-bold font-serif text-ewha-green">7,290+</span>
+                            <span class="text-xs text-slate-500 font-medium">Total Engagement</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold font-serif text-ewha-green">15,000+</span>
+                            <span class="text-xs text-slate-500 font-medium">Content Impressions</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold font-serif text-ewha-green">8,000+</span>
+                            <span class="text-xs text-slate-500 font-medium">Peak Single Post Reach</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Column / Profile Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md">
+                        <!-- Card Border Glow -->
+                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-ewha-green via-ewha-rose to-ewha-gold opacity-30 blur-lg"></div>
+
+                        <div class="relative bg-white rounded-3xl p-8 shadow-2xl border border-slate-100 space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-ewha-green to-ewha-lightgreen flex items-center justify-center text-white font-serif text-3xl font-bold shadow-lg">
+                                    PR
+                                </div>
+                                <div>
+                                    <h2 class="font-serif text-2xl font-bold text-slate-900">Peng Ruirui</h2>
+                                    <p class="text-xs font-semibold text-ewha-green uppercase tracking-wider mt-1">Student ID: 252GLB21</p>
+                                    <p class="text-xs text-slate-500 mt-0.5">Ewha Womans University Global MBA</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3 bg-ewha-cream p-4 rounded-2xl text-xs text-slate-600">
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-graduation-cap text-ewha-green w-4 text-center"></i>
+                                    <span><strong>Major:</strong> Global Business Administration</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-location-dot text-ewha-green w-4 text-center"></i>
+                                    <span><strong>Base:</strong> Seoul, South Korea</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-bullhorn text-ewha-green w-4 text-center"></i>
+                                    <span><strong>Core Role:</strong> In-Campus Content Officer</span>
+                                </div>
+                            </div>
+
+                            <div class="border-t border-slate-100 pt-4">
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-2">Core Philosophy</span>
+                                <p class="text-xs italic text-slate-600 leading-relaxed">
+                                    "Transforming institutional brand value into emotionally resonant stories through personal experience, cultural depth, and targeted audience engagement."
+                                </p>
+                            </div>
+
+                            <a href="#portfolio" class="block text-center w-full py-3 bg-slate-900 hover:bg-ewha-green text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors">
+                                Explore Campaign Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT & BRAND FIT -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-bold text-ewha-green uppercase tracking-widest">Brand Fit & Values</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">
+                    Aligning Personal Voice with Ewha’s Heritage
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600">
+                    As Korea’s premier women’s university, Ewha represents Truth, Goodness, and Beauty (真, 善, 美). My content strategy elevates this legacy for a contemporary international audience.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Pillar 1 -->
+                <div class="bg-ewha-cream p-8 rounded-2xl border border-ewha-rose/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-ewha-green text-white flex items-center justify-center font-bold text-xl mb-6 shadow-md shadow-ewha-green/20">
+                        01
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Brand as Content IP</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Ewha’s academic prestige, architectural splendor, and pioneering history form a rich storytelling reservoir. My channel presents these assets through dynamic, modern narrative angles.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-ewha-cream p-8 rounded-2xl border border-ewha-rose/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-ewha-rose text-ewha-darkgreen flex items-center justify-center font-bold text-xl mb-6 shadow-md">
+                        02
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">K-Culture Synergy</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Positioned at the heart of Seoul’s cultural movement, Ewha serves as a gateway to K-Entertainment, eSports, and lifestyle—creating high-converting content opportunities.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-ewha-cream p-8 rounded-2xl border border-ewha-rose/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl mb-6 shadow-md">
+                        03
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Authentic Student Voice</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Acting as a "User Experience Officer," I translate macro university initiatives into relatable, first-person study abroad journeys that cultivate genuine trust among prospective students.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: KEY METRICS (Interactive Counters) -->
+    <section id="metrics" class="py-20 bg-ewha-darkgreen text-white relative overflow-hidden">
+        <!-- Background Accents -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-ewha-green/50 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-xs font-bold text-ewha-rose uppercase tracking-widest">Performance Dashboard</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">
+                        Data-Driven Creator Impact
+                    </h2>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 max-w-md">
+                    Consistent growth across key metrics proves high engagement, organic trust, and strong content retention among Gen Z audiences.
+                </p>
+            </div>
+
+            <!-- Grid of Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="dark-glass-card p-6 rounded-2xl space-y-2">
+                    <span class="text-xs text-slate-300 uppercase tracking-wider block font-semibold">Total Likes & Saves</span>
+                    <div class="text-4xl lg:text-5xl font-bold font-serif text-white tracking-tight">
+                        <span class="counter" data-target="7290">0</span>+
+                    </div>
+                    <p class="text-xs text-ewha-rose pt-2 border-t border-white/10">6,540+ Likes | 750+ Saves</p>
+                </div>
+
+                <div class="dark-glass-card p-6 rounded-2xl space-y-2">
+                    <span class="text-xs text-slate-300 uppercase tracking-wider block font-semibold">Content Impression</span>
+                    <div class="text-4xl lg:text-5xl font-bold font-serif text-white tracking-tight">
+                        <span class="counter" data-target="15000">0</span>+
+                    </div>
+                    <p class="text-xs text-ewha-rose pt-2 border-t border-white/10">Across featured post series</p>
+                </div>
+
+                <div class="dark-glass-card p-6 rounded-2xl space-y-2">
+                    <span class="text-xs text-slate-300 uppercase tracking-wider block font-semibold">Published Posts</span>
+                    <div class="text-4xl lg:text-5xl font-bold font-serif text-white tracking-tight">
+                        <span class="counter" data-target="138">0</span>
+                    </div>
+                    <p class="text-xs text-ewha-rose pt-2 border-t border-white/10">High-frequency active posting</p>
+                </div>
+
+                <div class="dark-glass-card p-6 rounded-2xl space-y-2">
+                    <span class="text-xs text-slate-300 uppercase tracking-wider block font-semibold">Peak Campaign Reach</span>
+                    <div class="text-4xl lg:text-5xl font-bold font-serif text-ewha-gold tracking-tight">
+                        <span class="counter" data-target="8003">0</span>
+                    </div>
+                    <p class="text-xs text-ewha-rose pt-2 border-t border-white/10">K-Game / eSports Highlight</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: AUDIENCE DEMOGRAPHICS -->
+    <section id="demographics" class="py-20 bg-ewha-softpink/50">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold text-ewha-green uppercase tracking-widest">Audience Alignment</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">
+                        Targeted Reach: Gen Z & Prospective Applicants
+                    </h2>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        My follower base closely matches Ewha’s ideal prospective student persona: ambitious young women interested in higher education, international experiences, self-improvement, and modern lifestyle.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-ewha-green/10 text-ewha-green flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Core Age Bracket (&lt;23 Years)</h4>
+                                <p class="text-xs text-slate-600 mt-1">Over 80% of followers are high school and undergraduate students actively considering study abroad options in Korea.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-ewha-green/10 text-ewha-green flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-venus-mars"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Gender Distribution</h4>
+                                <p class="text-xs text-slate-600 mt-1">51% Female, 49% Male. Strong female engagement aligns with Ewha’s women leadership vision while maintaining broad general appeal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Charts & Tags -->
+                <div class="lg:col-span-7 bg-white p-8 rounded-3xl shadow-xl border border-slate-100 space-y-8">
+                    
+                    <h3 class="font-serif text-xl font-bold text-slate-900 border-b border-slate-100 pb-4">
+                        Audience Demographics & Interest Keywords
+                    </h3>
+
+                    <!-- Demographics Bar 1: Age -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-slate-700">Age Distribution: &lt;23 Years Old (Primary)</span>
+                            <span class="text-ewha-green">82%</span>
+                        </div>
+                        <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden">
+                            <div class="h-full bg-ewha-green rounded-full" style="width: 82%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Demographics Bar 2: Gender -->
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-slate-700">Gender Breakdown</span>
+                            <span class="text-slate-600">Female 51% | Male 49%</span>
+                        </div>
+                        <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden flex">
+                            <div class="h-full bg-pink-500" style="width: 51%"></div>
+                            <div class="h-full bg-slate-700" style="width: 49%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Keywords Cloud -->
+                    <div class="pt-4">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-3">Top Followers Interest Keywords</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-ewha-softpink text-ewha-darkgreen text-xs font-bold rounded-lg border border-ewha-rose/40"># Study in Korea</span>
+                            <span class="px-3 py-1.5 bg-ewha-softpink text-ewha-darkgreen text-xs font-bold rounded-lg border border-ewha-rose/40"># EWHA Campus Life</span>
+                            <span class="px-3 py-1.5 bg-ewha-softpink text-ewha-darkgreen text-xs font-bold rounded-lg border border-ewha-rose/40"># Self Growth</span>
+                            <span class="px-3 py-1.5 bg-ewha-softpink text-ewha-darkgreen text-xs font-bold rounded-lg border border-ewha-rose/40"># K-Culture & Events</span>
+                            <span class="px-3 py-1.5 bg-ewha-softpink text-ewha-darkgreen text-xs font-bold rounded-lg border border-ewha-rose/40"># Global MBA</span>
+                            <span class="px-3 py-1.5 bg-ewha-softpink text-ewha-darkgreen text-xs font-bold rounded-lg border border-ewha-rose/40"># Women Empowerment</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: CAMPAIGN PORTFOLIO (Filterable Grid) -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-xs font-bold text-ewha-green uppercase tracking-widest">Case Studies</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-1">
+                        Featured Campaign Showcase
+                    </h2>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap gap-2" id="filter-container">
+                    <button class="filter-btn active px-4 py-2 bg-ewha-green text-white text-xs font-bold rounded-full transition-all" data-filter="all">All</button>
+                    <button class="filter-btn px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 text-xs font-bold rounded-full transition-all" data-filter="esports">K-Game</button>
+                    <button class="filter-btn px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 text-xs font-bold rounded-full transition-all" data-filter="campus">EWHA Campus</button>
+                    <button class="filter-btn px-4 py-2 bg-slate-100 text-slate-600 hover:bg-slate-200 text-xs font-bold rounded-full transition-all" data-filter="lifestyle">K-Lifestyle</button>
+                </div>
+            </div>
+
+            <!-- Grid of Portfolio Items -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                
+                <!-- Card 1: K-Game World Championship -->
+                <div class="portfolio-item esports group bg-ewha-cream rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-56 bg-slate-900 overflow-hidden">
+                        <!-- Abstract Mock Image Placeholder -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-ewha-darkgreen to-blue-900 opacity-90 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center p-6 text-center">
+                            <div class="space-y-2">
+                                <span class="px-2.5 py-1 bg-yellow-400 text-slate-900 text-[10px] font-extrabold uppercase rounded">Top Performer</span>
+                                <h4 class="font-serif text-white font-bold text-xl">2025 S15 League World Championship</h4>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold">
+                            <i class="fa-solid fa-eye text-ewha-gold mr-1"></i> 8,003
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between text-xs text-slate-500 font-semibold">
+                            <span>K-Game & Cultural Participation</span>
+                            <span class="text-ewha-green">259 Likes | 28 Comments</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-slate-900 group-hover:text-ewha-green transition-colors">
+                            First-Person eSports Cultural Experience
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Transformed official tournament coverage into an immersive personal vlog, proving that cultural participation builds higher engagement than traditional media.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: K-Sport Campaign -->
+                <div class="portfolio-item lifestyle group bg-ewha-cream rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-56 bg-slate-900 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-emerald-900 to-teal-800 opacity-90 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center p-6 text-center">
+                            <div class="space-y-2">
+                                <span class="px-2.5 py-1 bg-ewha-rose text-slate-900 text-[10px] font-extrabold uppercase rounded">High Engagement</span>
+                                <h4 class="font-serif text-white font-bold text-xl">K-Sport & Student Energy</h4>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold">
+                            <i class="fa-solid fa-eye text-ewha-gold mr-1"></i> 3,121
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between text-xs text-slate-500 font-semibold">
+                            <span>K-Sport Series</span>
+                            <span class="text-ewha-green">457 Likes | 18 Saves</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-slate-900 group-hover:text-ewha-green transition-colors">
+                            Dynamic Student Life & Sports Vitality
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Showcased active lifestyle and campus spirit in Korea, generating high save rates among prospective international students.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: EWHA Campus Pride -->
+                <div class="portfolio-item campus group bg-ewha-cream rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-56 bg-slate-900 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-ewha-green to-slate-900 opacity-90 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center p-6 text-center">
+                            <div class="space-y-2">
+                                <span class="px-2.5 py-1 bg-ewha-gold text-slate-900 text-[10px] font-extrabold uppercase rounded">Brand Core</span>
+                                <h4 class="font-serif text-white font-bold text-xl">1886 EWHA Academic Heritage</h4>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold">
+                            <i class="fa-solid fa-eye text-ewha-gold mr-1"></i> 1,120
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between text-xs text-slate-500 font-semibold">
+                            <span>Campus Branding</span>
+                            <span class="text-ewha-green">22 Likes | 8 Saves</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-slate-900 group-hover:text-ewha-green transition-colors">
+                            Honoring Ewha’s Legacy & Environment
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Highlighted Ewha's gothic architecture and women-focused academic culture, positioning Ewha as a top global choice.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: K-Beauty & Fashion -->
+                <div class="portfolio-item lifestyle group bg-ewha-cream rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-56 bg-slate-900 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-rose-900 to-pink-800 opacity-90 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center p-6 text-center">
+                            <div class="space-y-2">
+                                <h4 class="font-serif text-white font-bold text-xl">K-Beauty & Style Spotlight</h4>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold">
+                            <i class="fa-solid fa-eye text-ewha-gold mr-1"></i> 1,035
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between text-xs text-slate-500 font-semibold">
+                            <span>Beauty & Lifestyle</span>
+                            <span class="text-ewha-green">41 Likes | 15 Saves</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-slate-900 group-hover:text-ewha-green transition-colors">
+                            Korean Beauty & Everyday Elegance
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Integrated personal style with local fashion trends, resonating strongly with young female prospective applicants.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 5: K-Tourism & Food -->
+                <div class="portfolio-item lifestyle group bg-ewha-cream rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-56 bg-slate-900 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-amber-900 to-orange-800 opacity-90 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center p-6 text-center">
+                            <div class="space-y-2">
+                                <h4 class="font-serif text-white font-bold text-xl">K-Tourism & Gourmet Guide</h4>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold">
+                            <i class="fa-solid fa-eye text-ewha-gold mr-1"></i> 270
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between text-xs text-slate-500 font-semibold">
+                            <span>Seoul Exploration</span>
+                            <span class="text-ewha-green">20 Likes | 7 Comments</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-slate-900 group-hover:text-ewha-green transition-colors">
+                            Exploring Seoul Around Ewha Campus
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Recommended local culinary spots and cultural spots around Sinchon and Edae, helping new students feel at home.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 6: K-Entertainment & Reflection -->
+                <div class="portfolio-item esports group bg-ewha-cream rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-2xl transition-all duration-300">
+                    <div class="relative h-56 bg-slate-900 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-indigo-900 to-purple-900 opacity-90 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center p-6 text-center">
+                            <div class="space-y-2">
+                                <h4 class="font-serif text-white font-bold text-xl">K-Entertainment Industry Insights</h4>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold">
+                            <i class="fa-solid fa-eye text-ewha-gold mr-1"></i> 230
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="flex items-center justify-between text-xs text-slate-500 font-semibold">
+                            <span>Industry Reflection</span>
+                            <span class="text-ewha-green">6 Likes | 2 Comments</span>
+                        </div>
+                        <h3 class="font-serif text-lg font-bold text-slate-900 group-hover:text-ewha-green transition-colors">
+                            Media Industry Analysis & Study Notes
+                        </h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Applied Global MBA marketing frameworks to analyze Korea’s content economy, blending academic depth with entertainment.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: AMBASSADOR STRATEGY & ROADMAP -->
+    <section id="strategy" class="py-20 bg-ewha-softpink/40">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs font-bold text-ewha-green uppercase tracking-widest">Future Roadmap</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900">
+                    3-Pillar Ambassador Strategy
+                </h2>
+                <p class="text-sm text-slate-600">
+                    Elevating my personal channel into an official, structured promotion asset for Ewha Womans University.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Pillar Step 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative space-y-4">
+                    <span class="text-xs font-bold text-ewha-green uppercase tracking-wider block">Phase 1</span>
+                    <h3 class="font-serif text-xl font-bold text-slate-900">Authentic Experience</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Transitioning from simple vlog recording to curated "Day in the Life of Ewha MBA" stories, presenting real academic excellence and student support.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-2 pt-2 border-t border-slate-100">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ewha-green"></i> First-person campus tours</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ewha-green"></i> Classroom & faculty highlights</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar Step 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-ewha-green relative space-y-4">
+                    <span class="px-3 py-1 bg-ewha-green text-white text-[10px] font-bold rounded-full uppercase tracking-wider inline-block">Phase 2 (Current Focus)</span>
+                    <h3 class="font-serif text-xl font-bold text-slate-900">Strategic Content & Insights</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Structuring content as: <strong>Experience &rarr; Insight &rarr; Actionable Advice</strong>. Providing prospective applicants with step-by-step admission guides.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-2 pt-2 border-t border-slate-100">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ewha-green"></i> Admission Q&A live sessions</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ewha-green"></i> Scholarship preparation tips</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar Step 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative space-y-4">
+                    <span class="text-xs font-bold text-ewha-green uppercase tracking-wider block">Phase 3</span>
+                    <h3 class="font-serif text-xl font-bold text-slate-900">Brand Co-Creation</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Collaborating directly with university communications to represent Ewha at international education fairs, global webinars, and official media channels.
+                    </p>
+                    <ul class="text-xs text-slate-600 space-y-2 pt-2 border-t border-slate-100">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ewha-green"></i> Multi-platform campaign synergy</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-ewha-green"></i> Global student recruitment impact</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 7: DIRECT ACCOUNTS PORTAL -->
+    <section id="accounts" class="py-20 bg-ewha-darkgreen text-white relative">
+        <div class="max-w-7xl mx-auto px-6 text-center space-y-12">
+            
+            <div class="max-w-2xl mx-auto space-y-3">
+                <span class="text-xs font-bold text-ewha-rose uppercase tracking-widest">Connect & Verify</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+                    Direct Social Media Portals
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-300">
+                    Explore live posts, audience interactions, and ongoing content creation across platforms.
+                </p>
+            </div>
+
+            <!-- Social Cards -->
+            <div class="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                
+                <!-- Xiaohongshu Card -->
+                <a href="https://xhslink.com/m/9hklZ0HiXMp" target="_blank" rel="noopener noreferrer"
+                   class="dark-glass-card p-8 rounded-3xl space-y-4 hover:border-red-400 transition-all transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-red-500 rounded-2xl flex items-center justify-center text-white text-2xl mx-auto shadow-lg">
+                        <i class="fa-solid fa-hashtag"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-white">Xiaohongshu (RED)</h3>
+                        <p class="text-xs text-slate-300 mt-1">Deep-dive blogs &amp; study tips</p>
+                    </div>
+                    <span class="inline-block text-xs font-bold text-red-300 group-hover:underline pt-2">
+                        Visit Profile &rarr;
+                    </span>
+                </a>
+
+                <!-- Threads / IG Card -->
+                <a href="https://www.threads.com/@ruibao0o3o?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener noreferrer"
+                   class="dark-glass-card p-8 rounded-3xl space-y-4 hover:border-slate-300 transition-all transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center text-white text-2xl mx-auto shadow-lg border border-slate-700">
+                        <i class="fa-brands fa-threads"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-white">Threads &amp; Instagram</h3>
+                        <p class="text-xs text-slate-300 mt-1">@ruibao0o3o</p>
+                    </div>
+                    <span class="inline-block text-xs font-bold text-slate-300 group-hover:underline pt-2">
+                        Visit Profile &rarr;
+                    </span>
+                </a>
+
+                <!-- Douyin Card -->
+                <a href="https://v.douyin.com/756-GZSf58o/" target="_blank" rel="noopener noreferrer"
+                   class="dark-glass-card p-8 rounded-3xl space-y-4 hover:border-emerald-400 transition-all transform hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-black rounded-2xl flex items-center justify-center text-white text-2xl mx-auto shadow-lg border border-slate-800">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif font-bold text-lg text-white">Douyin (TikTok)</h3>
+                        <p class="text-xs text-slate-300 mt-1">Short video vlogs &amp; campus life</p>
+                    </div>
+                    <span class="inline-block text-xs font-bold text-emerald-300 group-hover:underline pt-2">
+                        Visit Profile &rarr;
+                    </span>
+                </a>
+
+            </div>
+
+            <!-- Call to Action Banner -->
+            <div class="pt-8 max-w-xl mx-auto border-t border-white/10">
+                <p class="text-xs text-slate-300 mb-4">
+                    Ready to collaborate for the upcoming Ewha Student Ambassador term?
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="mailto:ruibao@ewha.ac.kr" class="px-6 py-3 bg-white text-ewha-darkgreen font-bold text-xs rounded-full shadow-lg hover:bg-ewha-rose transition-colors uppercase tracking-wider">
+                        Contact via Academic Email
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-slate-950 text-slate-500 text-xs text-center border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Peng Ruirui (彭睿睿). All rights reserved. Ewha Global MBA (252GLB21).</p>
+            <p>Designed for Ewha Womans University Student Ambassador Application.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Animated Number Counter on Scroll
+        const counters = document.querySelectorAll('.counter');
+        let animated = false;
+
+        function runCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const speed = 200; // lower is faster
+                const updateCount = () => {
+                    const count = +counter.innerText.replace(',', '');
+                    const inc = Math.ceil(target / speed);
+                    if (count < target) {
+                        counter.innerText = (count + inc).toLocaleString();
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const metricsSection = document.getElementById('metrics');
+            if (metricsSection) {
+                const sectionPos = metricsSection.getBoundingClientRect().top;
+                const screenPos = window.innerHeight / 1.3;
+                if (sectionPos < screenPos && !animated) {
+                    runCounters();
+                    animated = true;
+                }
+            }
+        });
+
+        // Campaign Filter Tabs Logic
+        const filterBtns = document.querySelectorAll('#filter-container .filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-ewha-green', 'text-white');
+                    b.classList.add('bg-slate-100', 'text-slate-600');
+                });
+                btn.classList.add('active', 'bg-ewha-green', 'text-white');
+                btn.classList.remove('bg-slate-100', 'text-slate-600');
+
+                const filter = btn.getAttribute('data-filter');
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
